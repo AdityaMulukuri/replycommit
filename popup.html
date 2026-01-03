@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<link rel="stylesheet" href="popup.css"/>
+</head>
+<body>
+<div class="wrap">
+  <div class="card top-card">
+    <div>
+      <div class="big" id="todayMain">0 / 50</div>
+      <div class="today-label">Today</div>
+    </div>
+    <div class="right-block">
+      <div class="emoji-row">
+        <div class="emoji-item" data-info="Current streak (consecutive active days)"><div class="emoji">🔥</div><div class="num" id="streak">0</div></div>
+        <div class="emoji-item" data-info="Longest streak ever"><div class="emoji">🧱</div><div class="num" id="longest">0</div></div>
+        <div class="emoji-item" data-info="Best single day (most replies)"><div class="emoji">🏆</div><div class="num" id="best">0</div></div>
+      </div>
+      <div class="target-row"><input id="targetInput" type="number" min="1"/></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="hm-title">Activity (latest →)</div>
+    <div class="hm-wrap"><canvas id="heatmap"></canvas></div>
+    <div id="hmTooltip" class="tooltip"></div>
+  </div>
+
+  <div class="card analytics">
+    <div>7d avg: <strong id="avg7">0</strong></div>
+    <div>30d avg: <strong id="avg30">0</strong></div>
+    <div>Best week: <strong id="bestWeek">0</strong></div>
+  </div>
+</div>
+<script src="popup.js"></script>
+</body>
+</html>

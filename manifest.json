@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "Reply Commit",
+  "description": "Reply Commit v2.6 \u2014 fixed emoji tooltips and responsive heatmap colors.",
+  "version": "2.6.0",
+  "permissions": [
+    "storage"
+  ],
+  "host_permissions": [
+    "https://x.com/*",
+    "https://twitter.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://x.com/*",
+        "https://twitter.com/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  }
+}
